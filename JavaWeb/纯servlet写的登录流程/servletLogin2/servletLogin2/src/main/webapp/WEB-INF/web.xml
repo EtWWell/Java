@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>servletLogin2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 设置servlet的名字（可自取）和相对路径 -->
+      <servlet>
+	   	<servlet-name>MyServlet</servlet-name>
+	   	<servlet-class>LoginServlet</servlet-class>
+    </servlet>
+    
+    <!-- 设置客户请求和servlet的映射关系，mapping可以设置多个，是有匹配规则的 -->
+    <servlet-mapping>
+	   	<servlet-name>MyServlet</servlet-name>
+	        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 同一个servlet的第二个mapping，浏览器输入这两个地址都可以访问到 -->
+        <servlet-mapping>
+	   	<servlet-name>MyServlet</servlet-name>
+	        <url-pattern>/LoginServlet/good</url-pattern>
+    </servlet-mapping>
+</web-app>

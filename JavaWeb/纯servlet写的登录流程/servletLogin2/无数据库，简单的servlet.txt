@@ -1,0 +1,2 @@
+来源：https://www.javatt.com/p/115247
+浏览器请求一个静态网页login.htm，网页中有一个表单，客户通过浏览器在表单中填写数据，再次发出一个HTTP请求，服务器拿到请求，通过action找到相应的servlet来处理请求，servlet通过request.getParameter()获取到表单中填写的数据，可以在服务端输出数据，也可以在返回一个respose，由服务器返回一个HTTP回复给浏览器端。代码中servlet是直接往response中价格一个html页面，看起很繁琐。html页面中包括可servlet处理后的请求数据，然后服务器返回一个这个页面（同样也是遵循HTTP协议）给浏览器，浏览器收到后渲染就得到了客户客户看到的结果。

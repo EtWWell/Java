@@ -1,0 +1,29 @@
+这是在w3cshool上的jQuery教程的第一个小游戏，原来的代码是：
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/jquery/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+<p>如果您点击我，我会消失。</p>
+<p>点击我，我会消失。</p>
+<p>也要点击我哦。</p>
+</body>
+</html>
+在w3c的执行界面上可以正常运行，点击文字就会消失。
+把代码复制到本地，运行可以显示文字，单点击不会消失，换浏览器也没用。
+查看代码，有这样一行代码引起了我的注意：
+<script src="/jquery/jquery-1.11.1.min.js">
+这个是引入一个文件的标记，于是在浏览器中搜索jQuery下载，找到下载页面，点击后是在浏览器中出现很长的代码，这些代码和JavaScript中的方法长得一样。
+我点击的是jQuery 3.6.0，将代码复制下载放到本地保存为.js文件，在Html页面中修改src的路径，再打开，能用了。
+
+jQuery是一个JavaScript库，里面写了很多使用JavaScript编程语言写的方法。
+jQuery极大简化了JavaScript编程，jQuery很容易学习。

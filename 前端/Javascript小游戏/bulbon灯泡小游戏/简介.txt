@@ -1,0 +1,3 @@
+使用：Javascript,Html
+Javascript是一种脚本语言，Html是超文本标记语言;Javascript可以插入在Html页面中使用，实验就是演示了插入效果。
+代码解读：首先这是一个Html页面，具有Html页面代码有的一切，代码中的<head></head>,<body><body>,<img>,<p></p>就是常用的Html标签，然后<script></script>就是脚本标记，中间是脚本内容。代码中使用onclick="changeImage()"来调用脚本中的方法。其中element.src.match("bulbon")中的bulbon代表开灯这张图片。

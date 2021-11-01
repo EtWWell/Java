@@ -1,0 +1,11 @@
+之前一直在纠结什么项目可以连接数据库，现在豁然开朗了
+只要JDBC的jar包就位了，版本也符合要求，并且在eclipse或者idea中引入了jar包（也就是设置了classpath临时），就可以连接数据库了。
+jar包的引入是关键，首先jar包到位，然后再使用的类中写import ***
+设置classpath的原因就是让你的import找得到jar包
+之前一直纠结普通java project 和java web project 连接数据库是不是有区别，然后还专门建立了两个项目比较。
+web project 
+java project
+这两个都可以右键项目名称然后再java build path中引入jar包，不同的是，web项目直接把jar包放在WEB-INF下的lib中也可以
+在项目根目录下新建lib存放jar包然后引入这个jar包和直接引入jar包相比：
+前者jar包会跟着项目移动，不用怕丢失，后者如果jar包移动了不太好找，当然也可以固定一个文件夹存放jar包，前者的缺点是不同项目可能使用相同的jar包，会多占用一些磁盘空间
+我在这里有一个想法，那就是把我所有的jar包放在一个文件夹中，当我要使用的时候就可以添加相应jar包或者直接把整个文件夹添加进去。
