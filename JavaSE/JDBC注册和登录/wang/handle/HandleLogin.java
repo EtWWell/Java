@@ -8,11 +8,11 @@ public class HandleLogin{
 	ResultSet rs;
 	public HandleLogin(){
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		}catch(Exception e){
 
 		}
-		String uri = "jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai";
+		String uri = "jdbc:mysql://localhost:3306/user?serverTimezone=Asia/Shanghai";
 		try{
 			con = DriverManager.getConnection(uri, "root", "123456");
 		}catch(SQLException e){}
@@ -26,6 +26,7 @@ public class HandleLogin{
 			preSql.setString(1, id);
 			preSql.setString(2, pw);
 			rs = preSql.executeQuery();
+			System.out.println("正在检查登录…………");
 			if(rs.next() == true){
 				loginModel.setLoginSuccess(true);
 				JOptionPane.showMessageDialog(null, "登录成功", "恭喜",JOptionPane.WARNING_MESSAGE);
