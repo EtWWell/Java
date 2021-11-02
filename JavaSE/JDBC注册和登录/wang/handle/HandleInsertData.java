@@ -9,10 +9,10 @@ public class HandleInsertData{
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		}catch(Exception e){}
-		String uri = "jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai";
+		String uri = "jdbc:mysql://localhost:3306/user?serverTimezone=Asia/Shanghai";
 		try{
-			con = DriverManager.getConnection(uri, "root", "123456");
 			System.out.println("正在连接数据库…………………………………………");
+			con = DriverManager.getConnection(uri, "root", "123456");
 			System.out.println(">>>>>>>数据库连接成功！！！");
 		}catch(SQLException e){
 
